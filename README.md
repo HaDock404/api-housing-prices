@@ -8,7 +8,7 @@ Here is my API using FastAPI which provides a simple and powerful interface to e
 
 The objective of this project is mainly GitOps oriented. This project is stored on a Gitlab server that I created with different levels of user management and complete project configuration in order to streamline and secure the creation process. This server has a runner allowing you to carry out numerous automations using pipelines in order to carry out CI/CD of the project.  
 
-![Example](./documentation/image1.jpeg)
+![Example](./documentation/image1.jpg)
 
 ## Table of Contents
 
