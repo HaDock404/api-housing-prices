@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Here is my API using FastAPI which provides a simple and powerful interface to estimate the price of your house based on its characteristics.   
+Here is my API using FastAPI which provides a simple and powerful interface to estimate the price of your house based on its characteristics. Fully managed with a local GitLab server.   
 
 ## Description  
 
