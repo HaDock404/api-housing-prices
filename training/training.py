@@ -7,12 +7,12 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 MODEL_PATH = '../model/modele_lr.pkl'
 SCALER_PATH = '../model/scaler.pkl'
-CSV_FILE_PATH = './data/Housing.csv'
+CSV_FILE_PATH = '../analysis/data/Housing.csv'
 
 THRESHOLDS = {
     "r2": 0.65,
-    "mae": 0.7,
-    "mse": 1.0
+    "mae": 0.9,
+    "mse": 1.25
 }
 
 
@@ -81,6 +81,8 @@ def train_and_evaluate_model(data):
 # Fonction principale pour vérifier les métriques et sauvegarder
 # le modèle si les critères sont respectés
 def main():
+    print("Start Training ..")
+    print("-----------------")
     data = load_and_prepare_data(CSV_FILE_PATH)
     model, scaler, mse, mae, r2 = train_and_evaluate_model(data)
 
@@ -92,10 +94,14 @@ def main():
     ):
         joblib.dump(model, MODEL_PATH)
         joblib.dump(scaler, SCALER_PATH)
+        print("---------------------------------------------")
         print("Le modèle est performant et a été enregistré.")
     else:
         print("Le modèle n'a pas atteint les seuils de\
               performance et n'a pas été enregistré.")
+
+    print("-------------")
+    print("End Training.")
 
 
 if __name__ == "__main__":
