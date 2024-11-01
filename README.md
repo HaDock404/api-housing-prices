@@ -17,9 +17,7 @@ The objective of this project is mainly GitOps oriented. This project is stored 
 - [Contributing](#Contributing)
 - [License](#License)  
 
-## Getting Started  
-
-You can't use my training model because of Github storage. But if you train your own model you can install and use my repository like this.  
+## Getting Started   
 
 ```bash
 git clone https://github.com/HaDock404/api-housing-prices.git
@@ -27,11 +25,10 @@ cd api-housing-prices
 pip install -r ./packages/requirements_api.txt
 ```  
 
-## Launch Application  
-
-You can't use my training model because of Github storage. But if you train your own model you can install and use my repository like this.  
+## Launch Application   
 
 ```bash
+cd production
 uvicorn api:app -—reload
 ```  
 
