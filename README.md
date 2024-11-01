@@ -10,6 +10,25 @@ The objective of this project is mainly GitOps oriented. This project is stored 
 
 ![Example](./documentation/image1.jpg)
 
+GitLab is a release management and collaboration platform that offers built-in DevOps features, such as continuous deployment (CD) and continuous integration (CI). In this project, GitLab is used to host the code and manage the different automation steps using a local GitLab server and a runner configured to execute the automated actions. This allows you to structure the project efficiently and centralize testing and deployment in one place. By applying GitOps principles, changes in code trigger automated pipelines for actions like training models, monitoring performance, or updating forecasts.  
+
+### Project objective: Estimation of house prices
+
+The main objective of this project is to estimate the sale price of houses based on their characteristics, such as surface area, number of rooms, or geographic location. The data used comes from the site [Kaggle](https://www.kaggle.com/datasets/yasserh/housing-prices-dataset/data) and contains a `.csv` file listing detailed characteristics of different houses. These variables include:  
+
+- the price of the house
+- the size of the house
+- the number of rooms
+- the number of bathrooms
+- number of floors
+- close to a main road
+- guest bedroom
+- basement
+- hot water tank
+- air conditioner  
+
+This project aims to explore these variables to understand their impact on price and build a predictive model capable of providing reliable price estimates. With GitLab CI/CD pipelines, the process of model training, validation, and deployment is automated, ensuring efficient management of model releases and updates.  
+
 ## Table of Contents
 
 - [Getting Started](#Getting-Started)
