@@ -7,8 +7,11 @@ import numpy as np
 app = FastAPI()
 
 # Charger le modèle et le scaler
-model = joblib.load('../model/modele_lr.pkl')
-scaler = joblib.load('../model/scaler.pkl')
+# model = joblib.load('../model/modele_lr.pkl')
+# scaler = joblib.load('../model/scaler.pkl')
+
+model = joblib.load('/app/model/modele_lr.pkl')
+scaler = joblib.load('/app/model/scaler.pkl')
 
 
 # Définir le modèle de données pour la requête
