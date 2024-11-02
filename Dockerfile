@@ -5,6 +5,8 @@ WORKDIR /app
 COPY packages/requirements.txt .
 RUN pip install -r requirements.txt
 
+COPY model /app/model
+
 WORKDIR /app/production
 
 COPY . . 
