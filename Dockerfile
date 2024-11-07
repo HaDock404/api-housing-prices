@@ -1,11 +1,11 @@
-FROM python:3.10-slim
+FROM python:3.10.9
 
 WORKDIR /app
 
 COPY packages/requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY model /app/model
+COPY models /app/models
 
 WORKDIR /app/production
 

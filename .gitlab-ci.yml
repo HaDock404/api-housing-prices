@@ -1,0 +1,43 @@
+image: docker:latest
+
+stages:
+  - download
+  - build
+  - deploy
+
+variables:
+  IMAGE_NAME: "housing:v0"
+  CONTAINER_NAME: "housing"
+
+before_script:
+  - echo "Initialisation du pipeline Docker"
+
+download_artifacts:
+  stage: download
+  image: alpine
+  script:
+    - apk add --no-cache git
+    - git clone https://gitlab-ci-token:${GITLAB_TOKEN}@gitlab.com/0xhadock/housing-prices/storage-housing-prices.git
+    - mkdir -p models
+    - cp storage-housing-prices/modele_lr.pkl models/
+    - cp storage-housing-prices/scaler.pkl models/
+  tags:
+    - runner_00
+
+build_image:
+  stage: build
+  script:
+    - echo "Construction de l'image Docker"
+    - docker build -t $IMAGE_NAME .
+  tags:
+    - runner_00
+
+deploy_image:
+  stage: deploy
+  script:
+    - echo "Vérification et suppression du conteneur existant s'il y en a un"
+    - docker rm -f $CONTAINER_NAME || true
+    - echo "Déploiement de l'image Docker"
+    - docker run -dp 5000:5000 -ti --name housing $IMAGE_NAME
+  tags:
+    - runner_00

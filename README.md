@@ -8,7 +8,7 @@ Here is my API using FastAPI which provides a simple and powerful interface to e
 
 The objective of this project is mainly GitOps oriented. This project is stored on a Gitlab server that I created with different levels of user management and complete project configuration in order to streamline and secure the creation process. This server has a runner allowing you to carry out numerous automations using pipelines in order to carry out CI/CD of the project.  
 
-![Example](./documentation/image1.jpg)
+[![Vidéo du projet](./documentation/image1.png)](https://www.youtube.com/watch?v=_tmrvwVn-Ps)
 
 GitLab is a release management and collaboration platform that offers built-in DevOps features, such as continuous deployment (CD) and continuous integration (CI). In this project, GitLab is used to host the code and manage the different automation steps using a local GitLab server and a runner configured to execute the automated actions. This allows you to structure the project efficiently and centralize testing and deployment in one place. By applying GitOps principles, changes in code trigger automated pipelines for actions like training models, monitoring performance, or updating forecasts.  
 
